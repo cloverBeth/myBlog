@@ -346,11 +346,12 @@ gulp.task('watch', function () {
   gulp.watch(['./src/index.html'], ['html']);
   gulp.watch(['./src/sass/**/*'], ['sass']);
   gulp.watch(['./bower_components/**/*.less'], ['less']);
-  gulp.watch(['./src/js/**/*', './src/partials/**/*', config.vendor.js], ['js']);
+  gulp.watch(['./src/js/**/*', './src/partials/**/*', config.vendor.js], ['partials']);
   gulp.watch([config.vendor.js], ['libjs']);
   gulp.watch(['./src/images/**/*'], ['images']);
   gulp.watch(['./src/app/**/*'], ['app']);
   gulp.watch(['./src/css/**/*'], ['css']);
+  gulp.watch(['./src/ajax/**/*'], ['ajax']);
 
 
 
