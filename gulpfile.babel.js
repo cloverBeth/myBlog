@@ -142,7 +142,11 @@ gulp.task('clean', function (cb) {
         path.join(config.dest, 'images'),
         path.join(config.dest, 'css'),
         path.join(config.dest, 'js'),
-        path.join(config.dest, 'fonts')
+        path.join(config.dest, 'fonts'),
+        path.join(config.dest,'includes'),
+        path.join(config.dest,'app'),
+        path.join(config.dest,'ajax'),
+        path.join(config.dest,'partials')
       ], { read: false })
      .pipe(rimraf());
 });
@@ -183,6 +187,31 @@ gulp.task('livereload', function () {
 gulp.task('images', function () {
   return gulp.src(['src/images/**/*','src/images/*'])
         .pipe(gulp.dest(path.join(config.dest, 'images')));
+});
+
+gulp.task('images', function () {
+    return gulp.src(['src/includes/**/*','src/includes/*'])
+        .pipe(gulp.dest(path.join(config.dest, 'includes')));
+});
+gulp.task('partials', function () {
+    return gulp.src(['src/partials/**/*','src/partials/*'])
+        .pipe(gulp.dest(path.join(config.dest, 'partials')));
+});
+gulp.task('app', function () {
+    return gulp.src(['src/app/**/*','src/app/*'])
+        .pipe(gulp.dest(path.join(config.dest, 'app')));
+});
+gulp.task('js', function () {
+    return gulp.src(['src/js/**/*','src/js/*'])
+        .pipe(gulp.dest(path.join(config.dest, 'js')));
+});
+gulp.task('ajax', function () {
+    return gulp.src(['src/ajax/**/*','src/ajax/*'])
+        .pipe(gulp.dest(path.join(config.dest, 'ajax')));
+});
+gulp.task('includes', function () {
+    return gulp.src(['src/includes/**/*','src/includes/*'])
+        .pipe(gulp.dest(path.join(config.dest, 'includes')));
 });
 
 
@@ -347,7 +376,7 @@ gulp.task('weinre', function() {
 ======================================*/
 
 gulp.task('build', function(done) {
-  var tasks = ['html', 'fonts', 'images', 'sass', 'libcss','less','libjs','js'];
+  var tasks = ['html', 'fonts', 'images', 'ajax','includes','app','partials','sass', 'libcss','less','libjs','js'];
   seq('clean', tasks, done);
 });
 
