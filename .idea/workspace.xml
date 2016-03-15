@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4510c37-accb-4f0f-9bcf-7a395150af24" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/app.620.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www/js/app.620.min.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.babel.js" afterPath="$PROJECT_DIR$/gulpfile.babel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/partials/task.html" afterPath="$PROJECT_DIR$/src/partials/task.html" />
     </list>
     <ignored path="apms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +38,8 @@
       <file leaf-file-name="gulpfile.babel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.babel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.616554">
-              <caret line="295" column="37" selection-start-line="295" selection-start-column="37" selection-end-line="295" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.44594595">
+              <caret line="350" column="35" selection-start-line="350" selection-start-column="35" selection-end-line="350" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -51,10 +48,10 @@
       <file leaf-file-name="updateTask.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ajax/updateTask.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.387097">
-              <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state vertical-scroll-proportion="-9.580646">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
-                <marker date="1458027720000" expanded="true" signature="172:224" placeholder="update tasks... " />
+                <marker date="1458028222000" expanded="true" signature="172:224" placeholder="update tasks... " />
               </folding>
             </state>
           </provider>
@@ -73,8 +70,8 @@
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/src/partials/task.html" />
         <option value="$PROJECT_DIR$/src/includes/db.php" />
-        <option value="$PROJECT_DIR$/src/ajax/updateTask.php" />
         <option value="$PROJECT_DIR$/gulpfile.babel.js" />
+        <option value="$PROJECT_DIR$/src/ajax/updateTask.php" />
       </list>
     </option>
   </component>
@@ -382,18 +379,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ajax/updateTask.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.387097">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        <state vertical-scroll-proportion="-9.580646">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <marker date="1458027720000" expanded="true" signature="172:224" placeholder="update tasks... " />
+            <marker date="1458028222000" expanded="true" signature="172:224" placeholder="update tasks... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gulpfile.babel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.616554">
-          <caret line="295" column="37" selection-start-line="295" selection-start-column="37" selection-end-line="295" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.44594595">
+          <caret line="350" column="35" selection-start-line="350" selection-start-column="35" selection-end-line="350" selection-end-column="35" />
           <folding />
         </state>
       </provider>
