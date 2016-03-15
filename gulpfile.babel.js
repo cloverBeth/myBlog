@@ -320,10 +320,8 @@ gulp.task('watch', function () {
   gulp.watch(['./src/js/**/*', './src/partials/**/*', config.vendor.js], ['js']);
   gulp.watch([config.vendor.js], ['libjs']);
   gulp.watch(['./src/images/**/*'], ['images']);
-  gulp.watch(['./src/ajax/**/*'], ['ajax']);
   gulp.watch(['./src/app/**/*'], ['app']);
   gulp.watch(['./src/css/**/*'], ['css']);
-  gulp.watch(['./src/includes/**/*'], ['includes']);
 
 
 
