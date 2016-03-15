@@ -279,6 +279,7 @@ gulp.task('js', function() {
         gulp.src('./src/js/app.js').pipe(babel())
             .pipe(replace('<replaceSec>', config.host)).pipe(ngFilesort()),
         gulp.src('./src/js/*/*.js').pipe(babel()).pipe(ngFilesort()),
+        gulp.src('./src/app/*/*.js').pipe(babel()).pipe(ngFilesort()),
         gulp.src(['src/partials/**/*.html']).pipe(templateCache({module: config.appName}))
     )
 
@@ -319,6 +320,13 @@ gulp.task('watch', function () {
   gulp.watch(['./src/js/**/*', './src/partials/**/*', config.vendor.js], ['js']);
   gulp.watch([config.vendor.js], ['libjs']);
   gulp.watch(['./src/images/**/*'], ['images']);
+  gulp.watch(['./src/ajax/**/*'], ['ajax']);
+  gulp.watch(['./src/app/**/*'], ['app']);
+  gulp.watch(['./src/css/**/*'], ['css']);
+  gulp.watch(['./src/includes/**/*'], ['includes']);
+
+
+
 });
 
 
