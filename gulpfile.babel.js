@@ -349,7 +349,7 @@ gulp.task('weinre', function() {
 ======================================*/
 
 gulp.task('build', function(done) {
-  var tasks = ['html', 'fonts', 'images', 'sass', 'libcss','less','libjs','js','ajax','includes','php'];
+  var tasks = ['html', 'fonts', 'images', 'sass', 'libcss','less','libjs','js','php'];
   seq('clean', tasks, done);
 });
 
