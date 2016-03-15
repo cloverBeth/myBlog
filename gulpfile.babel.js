@@ -314,7 +314,7 @@ gulp.task('watch', function () {
   if (typeof config.server === 'object') {
     gulp.watch([config.dest + '/**/*'],['livereload']);
   }
-  gulp.watch(['./src/html/**/*'], ['html']);
+  gulp.watch(['./src/index.html'], ['html']);
   gulp.watch(['./src/sass/**/*'], ['sass']);
   gulp.watch(['./bower_components/**/*.less'], ['less']);
   gulp.watch(['./src/js/**/*', './src/partials/**/*', config.vendor.js], ['js']);
