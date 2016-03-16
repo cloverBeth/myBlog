@@ -63,7 +63,7 @@ var config = {
 
   server: {
     host: '0.0.0.0',
-    port: '8000'
+    port: '8081'
   },
 
   weinre: {
@@ -143,10 +143,8 @@ gulp.task('clean', function (cb) {
         path.join(config.dest, 'css'),
         path.join(config.dest, 'js'),
         path.join(config.dest, 'fonts'),
-        path.join(config.dest,'includes'),
         path.join(config.dest,'app'),
-        path.join(config.dest,'ajax'),
-        path.join(config.dest,'partials')
+        path.join(config.dest,'ajax')
       ], { read: false })
      .pipe(rimraf());
 });
@@ -189,14 +187,6 @@ gulp.task('images', function () {
         .pipe(gulp.dest(path.join(config.dest, 'images')));
 });
 
-gulp.task('images', function () {
-    return gulp.src(['src/includes/**/*','src/includes/*'])
-        .pipe(gulp.dest(path.join(config.dest, 'includes')));
-});
-gulp.task('partials', function () {
-    return gulp.src(['src/partials/**/*','src/partials/*'])
-        .pipe(gulp.dest(path.join(config.dest, 'partials')));
-});
 gulp.task('app', function () {
     return gulp.src(['src/app/**/*','src/app/*'])
         .pipe(gulp.dest(path.join(config.dest, 'app')));
@@ -209,11 +199,6 @@ gulp.task('ajax', function () {
     return gulp.src(['src/ajax/**/*','src/ajax/*'])
         .pipe(gulp.dest(path.join(config.dest, 'ajax')));
 });
-gulp.task('includes', function () {
-    return gulp.src(['src/includes/**/*','src/includes/*'])
-        .pipe(gulp.dest(path.join(config.dest, 'includes')));
-});
-
 
 /*==================================
 =            Copy fonts            =
@@ -309,7 +294,7 @@ gulp.task('js', function() {
             .pipe(replace('<replaceSec>', config.host)).pipe(ngFilesort()),
         gulp.src('./src/js/*/*.js').pipe(babel()).pipe(ngFilesort()),
         gulp.src('./src/app/*/*.js').pipe(babel()).pipe(ngFilesort()),
-        gulp.src(['src/partials/**/*.html']).pipe(templateCache({module: config.appName}))
+        gulp.src(['src/html/**/*.html']).pipe(templateCache({module: config.appName}))
     )
 
     .pipe(sourcemaps.init())
@@ -346,7 +331,7 @@ gulp.task('watch', function () {
   gulp.watch(['./src/index.html'], ['html']);
   gulp.watch(['./src/sass/**/*'], ['sass']);
   gulp.watch(['./bower_components/**/*.less'], ['less']);
-  gulp.watch(['./src/js/**/*', './src/partials/**/*', config.vendor.js], ['partials']);
+  gulp.watch(['./src/js/**/*', './src/html/**/*', config.vendor.js], ['html']);
   gulp.watch([config.vendor.js], ['libjs']);
   gulp.watch(['./src/images/**/*'], ['images']);
   gulp.watch(['./src/app/**/*'], ['app']);
@@ -377,7 +362,7 @@ gulp.task('weinre', function() {
 ======================================*/
 
 gulp.task('build', function(done) {
-  var tasks = ['html', 'fonts', 'images', 'ajax','includes','app','partials','sass', 'libcss','less','libjs','js'];
+  var tasks = ['html', 'fonts', 'images', 'ajax','app','sass', 'libcss','less','libjs','js'];
   seq('clean', tasks, done);
 });
 
