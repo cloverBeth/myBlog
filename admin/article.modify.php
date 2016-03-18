@@ -2,7 +2,7 @@
 require_once('../connect.php');
 //读取旧信息
 $id = $_GET['id'];
-$query = mysqli_query($con,'select * from article where id=4');
+$query = mysqli_query($con,"select * from article where id=$id");
 //if (!$query) {
 //    printf("Error: %s\n", mysqli_error($con));
 //    exit();
