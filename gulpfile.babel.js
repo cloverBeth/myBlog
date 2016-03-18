@@ -187,18 +187,18 @@ gulp.task('images', function () {
         .pipe(gulp.dest(path.join(config.dest, 'images')));
 });
 
-gulp.task('app', function () {
-    return gulp.src(['src/app/**/*','src/app/*'])
-        .pipe(gulp.dest(path.join(config.dest, 'app')));
-});
-gulp.task('js', function () {
-    return gulp.src(['src/js/**/*','src/js/*'])
-        .pipe(gulp.dest(path.join(config.dest, 'js')));
-});
-gulp.task('ajax', function () {
-    return gulp.src(['src/ajax/**/*','src/ajax/*'])
-        .pipe(gulp.dest(path.join(config.dest, 'ajax')));
-});
+//gulp.task('app', function () {
+//    return gulp.src(['src/app/**/*','src/app/*'])
+//        .pipe(gulp.dest(path.join(config.dest, 'app')));
+//});
+//gulp.task('js', function () {
+//    return gulp.src(['src/js/**/*','src/js/*'])
+//        .pipe(gulp.dest(path.join(config.dest, 'js')));
+//});
+//gulp.task('ajax', function () {
+//    return gulp.src(['src/ajax/**/*','src/ajax/*'])
+//        .pipe(gulp.dest(path.join(config.dest, 'ajax')));
+//});
 
 /*==================================
 =            Copy fonts            =
@@ -222,7 +222,7 @@ gulp.task('html', function() {
   if (config.cordova) {
     inject.push('<script src="cordova.js"></script>');
   }
-  gulp.src(['src/html/**/*.html'])
+  gulp.src(['src/**/*.html'])
   .pipe(replace('<!-- inject:js -->', inject.join('\n    ')))
   .pipe(replace('<!-- app.js -->', '<script src="js/app.'+ config.round + '.min.js"></script>'))
   .pipe(gulp.dest(config.dest));
@@ -246,7 +246,7 @@ gulp.task('sass', function () {
         precision: 10,
         includePaths: ['.']
     }))
-    .pipe(mobilizer('app.css', {
+    .pipe(mobilizer('taskman.css', {
       'app.css': {
         hover: 'exclude',
         screens: ['0px']
@@ -294,7 +294,7 @@ gulp.task('js', function() {
             .pipe(replace('<replaceSec>', config.host)).pipe(ngFilesort()),
         gulp.src('./src/js/*/*.js').pipe(babel()).pipe(ngFilesort()),
         gulp.src('./src/app/*/*.js').pipe(babel()).pipe(ngFilesort()),
-        gulp.src(['src/html/**/*.html']).pipe(templateCache({module: config.appName}))
+        gulp.src(['src/**/*.html']).pipe(templateCache({module: config.appName}))
     )
 
     .pipe(sourcemaps.init())
@@ -335,8 +335,7 @@ gulp.task('watch', function () {
   gulp.watch([config.vendor.js], ['libjs']);
   gulp.watch(['./src/images/**/*'], ['images']);
   gulp.watch(['./src/app/**/*'], ['app']);
-  gulp.watch(['./src/css/**/*'], ['css']);
-  gulp.watch(['./src/ajax/**/*'], ['ajax']);
+  gulp.watch(['./src/scss/**/*'], ['css']);
 
 
 
@@ -362,7 +361,7 @@ gulp.task('weinre', function() {
 ======================================*/
 
 gulp.task('build', function(done) {
-  var tasks = ['html', 'fonts', 'images', 'ajax','app','sass', 'libcss','less','libjs','js'];
+  var tasks = ['html', 'fonts', 'images','sass', 'libcss','less','libjs','js','ajax'];
   seq('clean', tasks, done);
 });
 
