@@ -20,32 +20,32 @@ $data = mysqli_fetch_assoc($query);
 </head>
 
 <body>
-<table width="100%" height="520" border="0" cellpadding="8" cellspacing="1" bgcolor="#000000">
+<table class="outer-wrapper" width="100%" height="760" border="0" cellpadding="28" cellspacing="1" bgcolor="#3B5998">
     <tr>
-        <td height="89" class="theme" colspan="3" bgcolor="#3B5998"><h1>后台管理系统</h1></td>
-
+        <td height="89" class="theme" colspan="3" bgcolor="#3B5998">
+            <div class="logo"></div><h1>后台管理系统</h1>
+        </td>
     </tr>
-    <tr>
-        <td width="213" height="287" align="left" valign="top" bgcolor="#FFFF99">
-            <p><a href="article.add.php">发布文章</a></p>
-            <p><a href="article.manage.php?p=1">管理文章</a></p>
+    <tr bgcolor="#3B5998">
+        <td class="manage-ctrl" width="15%" height="287" align="center" valign="top" bgcolor="#3B5998">
+            <p><a class="nav-light"href="article.add.php">发布文章</a></p>
+            <p><a class="nav-light"href="article.manage.php?p=1">管理文章</a></p>
             <a href="article.add.php"></a>
         </td>
-        <td width="854" valign="top" bgcolor="#FFFFFF">
-            <form id="form1" name="form1" method="post" action="article.modify.handle.php">
-                <input type="hidden" name="id" value="<?php echo $data['id']?>" />
-                <table width="590" border="0" cellpadding="8" cellspacing="1">
+        <td width="85%" class="scroll-com"valign="center" bgcolor="#FFFFFF">
+            <form id="form1" name="form1" method="post" action="article.add.handle.php">
+                <table width="779" border="0" cellpadding="8" cellspacing="1">
                     <tr>
-                        <td colspan="2" align="center">修改文章</td>
+                        <td colspan="2" align="center"><h2>修改文章</h2></td>
                     </tr>
                     <tr>
                         <td width="119">标题</td>
-                        <td width="437"><label for="title"></label>
+                        <td width="437" class="inputs"><label for="title"></label>
                             <input type="text" name="title" id="title" value="<?php echo $data['title']?>"/></td>
                     </tr>
                     <tr>
                         <td>作者</td>
-                        <td><input type="text" name="author" id="author"  value="<?php echo $data['author']?>"/></td>
+                        <td class="inputs"><input type="text" name="author" id="author"  value="<?php echo $data['author']?>"/></td>
                     </tr>
                     <tr>
                         <td>简介</td>
@@ -57,14 +57,13 @@ $data = mysqli_fetch_assoc($query);
                         <td><textarea name="content" cols="60" rows="20" id="content"><?php echo $data['content']?></textarea></td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="right"><input type="submit" name="button" id="button" value="提交" /></td>
+                        <td colspan="2" class="btn-submit"align="right"><input type="submit" name="button" id="button" value="提交" /></td>
                     </tr>
                 </table>
             </form></td>
     </tr>
-    <tr>
-        <td colspan="2" bgcolor="#FFFF99"><strong>版权所有</strong></td>
-    </tr>
 </table>
+<div class="footer"><strong>版权所有&copy;</strong></div>
+
 </body>
 </html>

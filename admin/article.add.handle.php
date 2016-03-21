@@ -14,9 +14,9 @@ $insert = "insert into article(title, author, description, content, dateline) va
 
 //echo $insert;
 if(mysqli_query($con,$insert)){
-    echo "<script>alert('发布文章成功');window.location.href='article.manage.php';</script>";
+    echo "<script>alert('发布文章成功');window.location.href='article.manage.php?p=1';</script>";
 }else{
-    echo "<script>alert('发布失败');window.location.href='article.manage.php';</script>";
+    echo "<script>alert('发布失败');window.location.href='article.manage.php?p=1';</script>";
 }
 
 

@@ -9,8 +9,17 @@ body {
 	padding: 0;
 	background: #FFFFFF;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
+	font-size: 16px;
 	color: #6D6D6D;
+	overflow: auto;
+	scrollbar-face-color:#b46868;
+}
+textarea{
+	border:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance:none;
+	appearance:none;
 }
 a{
 	text-decoration: none;
@@ -37,18 +46,6 @@ p, ul, ol {
 	line-height: 26px;
 }
 
-a:link {
-	color: #7AD000;
-}
-
-a:hover, a:active {
-	text-decoration: none;
-	color: #7AD000;
-}
-
-a:visited {
-	color: #7AD000;
-}
 
 img {
 	border: none;
@@ -372,9 +369,107 @@ div.squar-num{
 	text-align:center;'
 
 }
+.outer-wrapper{
+	/*background:url(src/images/bg3.png);*/
+}
+div.logo{
+	width:80px;
+	height:80px;
+	border:1px solid;
+	display:inline-block;
+	border-radius:50%;
+	background:url(src/images/umbrella.jpg) no-repeat;
+	background-size:80px 80px;
 
-
+}
+td.theme{
+	border-bottom:4px solid #fff;
+}
 td.theme h1{
+	display:inline-block;
 	color:#FFFFFF;
-	margin:0 0 0 50px;
+	margin:0 0 20px 20px;
+}
+.manage-ctrl p{
+	border:1px solid #fff;
+	height:50px;
+	background:#fff;
+	color:#3B5998;
+	line-height: 50px;
+}
+
+.manage-ctrl p a:hover{
+	background:#3B5998;
+	color:#fff;
+	line-height: 50px;
+}
+.manage-ctrl p a{
+	display:block;
+	width:100%;
+	text-align:center;
+	color:#3B5998;
+	font-size:18px;
+}
+/*.click{*/
+	/*display:block;*/
+	/*width:100%;*/
+	/*text-align:center;*/
+	/*color:red;*/
+	/*font-size:18px;*/
+/*}*/
+
+.scroll-com{
+	/*background-color: #DCDCDC;*/
+	background:url(src/images/bg3.png);
+	/*border:3px solid red;*/
+	display:inline-block;
+	height:450px;
+	overflow:scroll;
+
+}
+
+  ::-webkit-scrollbar {
+	width: 15px;
+}
+  ::-webkit-scrollbar-track {
+	  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+} /* 滚动条的滑轨背景颜色 */
+
+  ::-webkit-scrollbar-thumb {
+	  background-color: #b46868;
+  } /* 滑块颜色 */
+
+  ::-webkit-scrollbar-button {
+	  background-color: #7c2929;
+  } /* 滑轨两头的监听按钮颜色 */
+
+	::-webkit-scrollbar-corner {
+	  background-color: black;
+  } /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+.btn-submit input[type='submit']{
+	width:80px;
+	height:30px;
+	border:none;
+	background:#3B5998;
+	color:#fff;
+}
+.container{
+	width:100%;
+	height:760px;
+	background: #3B5998;
+}
+.footer{
+	height:60px;
+	line-height: 60px;
+	position:fixed;
+	background-color:#E7E7E7;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+td.inputs input{
+	width:80%;
+	height:25px;
+	font-size:16px;
 }

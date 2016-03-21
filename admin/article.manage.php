@@ -24,22 +24,24 @@ $showPage=3;
 <head>
     <meta charset="UTF-8">
     <title>manage</title>
+    <link rel="icon" href="../src/images/begins.jpg" mce_href="../src/images/begins.jpg" type="image/x-icon" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <link href="../default.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
-<table width="100%" height="auto" border="0" cellpadding="8" cellspacing="1" bgcolor="#3B5998">
+<div class="container">
+    <table width="100%" height="660" border="0" cellpadding="28" cellspacing="1" bgcolor="#3B5998">
     <tr>
-        <td height="89" class="theme" colspan="3" bgcolor="#3B5998"><h1>后台管理系统</h1></td>
+        <td height="89" class="theme" colspan="3" bgcolor="#3B5998"><div class="logo"></div><h1>后台管理系统</h1></td>
     </tr>
     <tr>
-        <td width="15%" height="287" align="left" valign="top" bgcolor="#3B5998">
-            <p><a href="article.add.php">发布文章</a></p>
-            <p><a href="article.manage.php?p=1">管理文章</a></p>
+        <td class="manage-ctrl" width="15%" height="287" align="center" valign="top" bgcolor="#3B5998">
+            <p><a class="nav-light"href="article.add.php">发布文章</a></p>
+            <p><a class="nav-light"href="article.manage.php?p=1">管理文章</a></p>
         </td>
-        <td width="75%" valign="center" align="center"bgcolor="#FFFFFF">
+        <td width="75%" valign="center" height="364"align="center"bgcolor="#FFFFFF">
             <table width="743" border="0" cellpadding="8" cellspacing="1" bgcolor="#3B5998">
                 <tr>
                     <td colspan="3" align="center" bgcolor="#FFFFFF">文章管理列表</td>
@@ -146,10 +148,10 @@ $showPage=3;
         </td>
         <td width="10%"></td>
     </tr>
-    <tr>
-        <td colspan="3" height="40px;"bgcolor="#3B5998"><strong>版权所有</strong></td>
-    </tr>
 </table>
+</div>
+<div class="footer"><strong>版权所有&copy;</strong></div>
+
 </body>
 </html>
 
