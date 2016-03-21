@@ -3,24 +3,19 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <style type="text/css">
-        body {
-            margin-left: 0px;
-            margin-top: 0px;
-            margin-right: 0px;
-            margin-bottom: 0px;
-        }
-    </style>
+    <link href="../default.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
 </head>
 
 <body>
 <table width="100%" height="520" border="0" cellpadding="8" cellspacing="1" bgcolor="#000000">
     <tr>
-        <td height="89" colspan="2" bgcolor="#FFFF99"><strong>后台管理系统</strong></td>
+        <td height="89" class="theme" colspan="3" bgcolor="#3B5998"><h1>后台管理系统</h1></td>
     </tr>
     <tr>
         <td width="156" height="287" align="left" valign="top" bgcolor="#FFFF99"><p><a href="article.add.php">发布文章</a></p>
-            <p><a href="article.manage.php">管理文章</a></p>      <a href="article.add.php"></a></td>
+            <p><a href="article.manage.php?p=1">管理文章</a></p>
+            <a href="article.add.php"></a></td>
         <td width="837" valign="top" bgcolor="#FFFFFF">
             <form id="form1" name="form1" method="post" action="article.add.handle.php">
                 <table width="779" border="0" cellpadding="8" cellspacing="1">

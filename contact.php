@@ -1,17 +1,13 @@
 <?php
 require_once('connect.php');
-$id = intval($_GET['id']);//intval()转换为整数类型
-$sql = "select * from article where id=$id";
+$sql = "select * from  information";
 $query = mysqli_query($con,$sql);
 if($query&&mysqli_num_rows($query)){
-    $row = mysqli_fetch_assoc($query);
-}else{
-    echo "这篇文章不存在";
-    exit;
+    $contact = mysqli_result($query,0,'contact');
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>文章发布系统</title>
@@ -29,9 +25,9 @@ if($query&&mysqli_num_rows($query)){
         </div>
         <div id="menu">
             <ul>
-                <li class="active"><a href="#">文章</a></li>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">联系我们</a></li>
+                <li class="active"><a href="article.list.php">文章</a></li>
+                <li><a href="about.php">关于我们</a></li>
+                <li><a href="contact.php">联系我们</a></li>
             </ul>
         </div>
     </div>
@@ -42,13 +38,15 @@ if($query&&mysqli_num_rows($query)){
 <div id="page">
     <!-- start content -->
     <div id="content">
+
         <div class="post">
-            <h1 class="title"><!--文章标题放置到这里--><?php echo $row['title']?><span style="color:#ccc;font-size:14px;">　　作者：<!--作者放置到这里--><?php echo $row['author'];?></span></h1>
+            <h1 class="title">联系我们</h1>
             <div class="entry">
-                <!--文章内容放置到这里-->
-                <?php echo $row['content']?>
+                <?php echo $contact?>
             </div>
+
         </div>
+
     </div>
     <!-- end content -->
     <!-- start sidebar -->
@@ -71,7 +69,7 @@ if($query&&mysqli_num_rows($query)){
 <!-- end page -->
 <!-- start footer -->
 <div id="footer">
-    <p id="legal"></p>
+
 </div>
 <!-- end footer -->
 </body>

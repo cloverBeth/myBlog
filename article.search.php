@@ -1,17 +1,16 @@
 <?php
 require_once('connect.php');
-$id = intval($_GET['id']);//intval()转换为整数类型
-$sql = "select * from article where id=$id";
+$key = $_GET['key'];
+$sql = "select * from article where title like '%$key%' order by dateline desc";
 $query = mysqli_query($con,$sql);
 if($query&&mysqli_num_rows($query)){
-    $row = mysqli_fetch_assoc($query);
-}else{
-    echo "这篇文章不存在";
-    exit;
+    while($row = mysqli_fetch_assoc($query)){
+        $data[] = $row;
+    }
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>文章发布系统</title>
@@ -29,9 +28,9 @@ if($query&&mysqli_num_rows($query)){
         </div>
         <div id="menu">
             <ul>
-                <li class="active"><a href="#">文章</a></li>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">联系我们</a></li>
+                <li class="active"><a href="article.list.php">文章</a></li>
+                <li><a href="about.php">关于我们</a></li>
+                <li><a href="contact.php">联系我们</a></li>
             </ul>
         </div>
     </div>
@@ -42,13 +41,25 @@ if($query&&mysqli_num_rows($query)){
 <div id="page">
     <!-- start content -->
     <div id="content">
-        <div class="post">
-            <h1 class="title"><!--文章标题放置到这里--><?php echo $row['title']?><span style="color:#ccc;font-size:14px;">　　作者：<!--作者放置到这里--><?php echo $row['author'];?></span></h1>
-            <div class="entry">
-                <!--文章内容放置到这里-->
-                <?php echo $row['content']?>
-            </div>
-        </div>
+        <?php
+        if(empty($data)){
+            echo "当前没有文章，请管理员在后台添加文章";
+        }else{
+            foreach($data as $value){
+                ?>
+                <div class="post">
+                    <h1 class="title"><?php echo $value['title']?><span style="color:#ccc;font-size:14px;">　　作者：<!--作者放置到这里--><?php echo $value['author']?></span></h1>
+                    <div class="entry">
+                        <?php echo $value['description']?>
+                    </div>
+                    <div class="meta">
+                        <p class="links"><a href="article.show.php?id=<?php echo $value['id']?>" class="more">查看详细</a>&nbsp;&nbsp;&raquo;&nbsp;&nbsp;</p>
+                    </div>
+                </div>
+                <?php
+            }
+        }
+        ?>
     </div>
     <!-- end content -->
     <!-- start sidebar -->
