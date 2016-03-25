@@ -13,6 +13,7 @@ if(!mysqli_select_db($con,DB_NAME)){
 if(!mysqli_query($con,'set names utf8')){
     echo mysqli_error($con);
 }
+ini_set('date.timezone','Asia/Shanghai');//设置时区
 
 //$query=mysqli_query($con,'select * from article');
 ////mysqli_fetch_row($query);

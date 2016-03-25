@@ -23,7 +23,14 @@ textarea{
 }
 a{
 	text-decoration: none;
+	color:black;
 }
+a:visited{
+	color:orchid;
+}
+a:link{color:blue;}
+a:active{color:pink;}
+a:hover{color:olive;}
 h1, h2, h3 {
 	margin: 0;
 	text-transform: lowercase;

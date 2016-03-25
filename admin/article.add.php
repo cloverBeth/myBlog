@@ -6,7 +6,10 @@
     <link rel="icon" href="../src/images/begins.jpg" mce_href="../src/images/begins.jpg" type="image/x-icon" />
     <link href="../default.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
-
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="../bower_components/utf8-php/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="../bower_components/utf8-php/ueditor.all.js"></script>
 </head>
 
 <body>
@@ -44,10 +47,16 @@
                     </tr>
                     <tr>
                         <td align="center">内容</td>
-                        <td><textarea name="content" cols="70" rows="15" id="content"></textarea></td>
+                        <td>
+                            <textarea name="content" cols="70" rows="15" id="content">
+
+                            </textarea>
+                        </td>
                     </tr>
                     <tr>
-                        <td colspan="2" align="right" class="btn-submit"><input type="submit" name="button" id="button" value="提交" /></td>
+                        <td colspan="2" align="right" class="btn-submit">
+                            <input type="submit" name="button" id="button" value="提交" />
+                        </td>
                     </tr>
                 </table>
             </form></td>

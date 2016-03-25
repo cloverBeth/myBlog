@@ -10,8 +10,8 @@ if($query&&mysqli_num_rows($query)){
     exit;
 }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html lang="en">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>文章发布系统</title>
@@ -43,7 +43,11 @@ if($query&&mysqli_num_rows($query)){
     <!-- start content -->
     <div id="content">
         <div class="post">
-            <h1 class="title"><!--文章标题放置到这里--><?php echo $row['title']?><span style="color:#ccc;font-size:14px;">　　作者：<!--作者放置到这里--><?php echo $row['author'];?></span></h1>
+            <h1 class="title">
+                <!--文章标题放置到这里--><?php echo $row['title']?>
+                <span style="color:#ccc;font-size:14px;">
+                    　　作者：<!--作者放置到这里--><?php echo $row['author'];?>
+                </span></h1>
             <div class="entry">
                 <!--文章内容放置到这里-->
                 <?php echo $row['content']?>

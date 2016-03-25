@@ -1,9 +1,10 @@
 <?php
 require_once('../connect.php');
 //把传递过来的信息入库
-print_r($_POST);
+//print_r($_POST);
 if(!(isset($_POST['title'])&&(!empty($_POST['title'])))){
     echo "<script>alert('标题不能为空');window.location.href='article.add.php';</script>";
+    return;
 }
 $title = $_POST['title'];
 $author = $_POST['author'];
@@ -18,14 +19,3 @@ if(mysqli_query($con,$insert)){
 }else{
     echo "<script>alert('发布失败');window.location.href='article.manage.php?p=1';</script>";
 }
-
-
-//$query=mysqli_query($con,$insert);
-////mysqli_fetch_row($query);
-//if (!$query) {
-//    printf("Error: %s\n", mysqli_error($con));
-//    exit();
-//}
-//while($row=mysqli_fetch_row($query)){
-//	print_r($row);
-//}

@@ -27,6 +27,8 @@ $showPage=3;
     <link rel="icon" href="../src/images/begins.jpg" mce_href="../src/images/begins.jpg" type="image/x-icon" />
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <link href="../default.css" rel="stylesheet" type="text/css" />
+<!--    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">-->
+<!--    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
 
 </head>
 
@@ -96,7 +98,7 @@ $showPage=3;
                         if($page>1)
                         {
                             $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=1'>首页</a>";
-                            $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=" .($page-1). "'>上一页</a>";
+                            $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=" .($page-1). "'> < 上一页 </a>";
                         }
 
                         //初始化
@@ -129,14 +131,14 @@ $showPage=3;
                             $page_banner.="...";
                         }
                         if($page<$total_pages){
-                            $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=" .($page+1). "'>下一页</a>";
-                            $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=" .($total_pages). "'>尾页</a>";
+                            $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=" .($page+1). "'> 下一页 > </a>";
+                            $page_banner.="<a href='".$_SERVER["PHP_SELF"]. "?p=" .($total_pages). "'> 尾页 </a>";
 
                         }
-                        $page_banner.=" 共{$total_pages}页 ";
+                        $page_banner.=" 共 {$total_pages} 页 ";
 
-                        $page_banner.="<form  style='display:inline-block;'action='article.manage.php' method='get'>
-                        到第<input type='text'size='2'name='p'>页
+                        $page_banner.="<form  class='btn-submit' style='display:inline-block;'action='article.manage.php' method='get'>
+                        到第 <input type='text'size='3'name='p'> 页
                         <input type='submit'value='确定'>
                             </form>";
                         echo $page_banner;
