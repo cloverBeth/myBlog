@@ -3,8 +3,8 @@ require_once('../connect.php');
 $sql = "select * from article order by dateline desc";//dateline字段的降序排列
 $query  = mysqli_query($con,$sql);
 if($query&&mysqli_num_rows($query)){
-    while($row =mysqli_fetch_assoc($query)){
-        $data[] = $row;
+    while($rows =mysqli_fetch_assoc($query)){
+        $data[] = $rows;
     }
 }else{
     $data = array();
@@ -23,9 +23,9 @@ $showPage=3;
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>manage</title>
-    <link rel="icon" href="../src/images/begins.jpg" mce_href="../src/images/begins.jpg" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title>后台管理</title>
+    <link rel="icon" href="../images/umbrella.jpg" mce_href="../images/umbrella.jpg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="../default.css" rel="stylesheet" type="text/css" />
 <!--    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">-->
 <!--    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
@@ -33,50 +33,56 @@ $showPage=3;
 </head>
 
 <body>
+<div style="width:100%;height:5rem;">
+    <?php require_once('header.php');?>
+
+</div>
 <div class="container">
-    <table width="100%" height="660" border="0" cellpadding="28" cellspacing="1" bgcolor="#3B5998">
-    <tr>
-        <td height="89" class="theme" colspan="3" bgcolor="#3B5998"><div class="logo"></div><h1>后台管理系统</h1></td>
-    </tr>
-    <tr>
-        <td class="manage-ctrl" width="15%" height="287" align="center" valign="top" bgcolor="#3B5998">
-            <p><a class="nav-light"href="article.add.php">发布文章</a></p>
-            <p><a class="nav-light"href="article.manage.php?p=1">管理文章</a></p>
-        </td>
-        <td width="75%" valign="center" height="364"align="center"bgcolor="#FFFFFF">
-            <table width="743" border="0" cellpadding="8" cellspacing="1" bgcolor="#3B5998">
-                <tr>
-                    <td colspan="3" align="center" bgcolor="#FFFFFF">文章管理列表</td>
-                </tr>
-                <tr>
-                    <td width="37" bgcolor="#FFFFFF">编号</td>
-                    <td width="572" bgcolor="#FFFFFF">标题</td>
-                    <td width="82" bgcolor="#FFFFFF">操作</td>
-                </tr>
-                <?php
+    <div class="manage-ctrl" align="center" valign="center">
+        <p><a class="nav-light"href="article.add.php">发布文章</a></p>
+        <p><a class="nav-light"href="article.manage.php?p=1">管理文章</a></p>
+    </div>
+    <table class="outer-wrapper" width="85%"border="0" cellpadding="28" cellspacing="1">
+<!--        <tr>-->
+<!--            <td height="60" class="theme" colspan="3">-->
+<!--                <div class="logo"></div><h1>后台管理系统</h1>-->
+<!--            </td>-->
+<!--        </tr>-->
+         <tr class="manage-body">
 
-                $page=$_GET['p'];
-                $limitsql="select * from article LIMIT " .($page-1)*3 .",3";
-                $result=mysqli_query($con,$limitsql);
-                $pageSize=10;
+             <td width="85%" class="manage-body" valign="center">
+                        <table width="100%" border="0" cellpadding="15" cellspacing="1">
+                            <tr>
+                                <td colspan="3" align="center" bgcolor="#FFFFFF">文章管理列表</td>
+                            </tr>
+                            <tr>
+                                <td width="37" bgcolor="#FFFFFF">编号</td>
+                                <td width="572" bgcolor="#FFFFFF">标题</td>
+                                <td width="82" bgcolor="#FFFFFF">操作</td>
+                            </tr>
+                                    <?php
 
-                while($row=mysqli_fetch_assoc($result)) {
-                        ?>
-                        <tr>
-                            <td bgcolor="#FFFFFF">&nbsp;<?php echo $row['id']?></td>
-                            <td bgcolor="#FFFFFF">&nbsp;<?php echo $row['title']?></td>
-                            <td bgcolor="#FFFFFF">
-                                <a href="article.del.handle.php?id=<?php echo $row['id']?>">删除</a>
-                                <a href="article.modify.php?id=<?php echo $row['id']?>">修改</a>
-                            </td>
-                        </tr>
-                        <?php
-                }
-                mysqli_free_result($result);
+                                    $page=$_GET['p'];
+                                    $limitsql="select * from article order by dateline desc LIMIT " .($page-1)*3 .",3";
+                                    $result=mysqli_query($con,$limitsql);
+                                    $pageSize=10;
 
-                ?>
+                                    while($row=mysqli_fetch_assoc($result)) {
+                                            ?>
+                                            <tr>
+                                                <td bgcolor="#FFFFFF">&nbsp;<?php echo $row['id']?></td>
+                                                <td bgcolor="#FFFFFF">&nbsp;<?php echo $row['title']?></td>
+                                                <td bgcolor="#FFFFFF">
+                                                    <a href="article.del.handle.php?id=<?php echo $row['id']?>">删除</a>
+                                                    <a href="article.modify.php?id=<?php echo $row['id']?>">修改</a>
+                                                </td>
+                                            </tr>
+                                            <?php
+                                    }
+                                    mysqli_free_result($result);
+                                    ?>
 
-                <tr bgcolor="#faebd7"align="center">
+                            <tr bgcolor="#faebd7"align="center">
                     <td colspan="3">
                         <?php
 
@@ -146,14 +152,25 @@ $showPage=3;
                         ?>
                     </td>
                 </tr>
-            </table>
-        </td>
-        <td width="10%"></td>
-    </tr>
-</table>
+                        </table>
+                   </td>
+              <td width="10%"></td>
+          </tr>
+    </table>
 </div>
 <div class="footer"><strong>版权所有&copy;</strong></div>
-
+<!--<script>-->
+<!--    $(document).ready(function(){-->
+<!--       $("div.squar-num a").each(function(index){-->
+<!--           $(this).click(function(){-->
+<!--               alert('hkf');-->
+<!--               $(".squar-num a").removeClass("bgclick");-->
+<!--               $("a").eq(index).addClass("bgclick");-->
+<!--           });-->
+<!--       })-->
+<!---->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>
 

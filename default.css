@@ -91,15 +91,16 @@ input, textarea, select {
 	color: #333333;
 }
 
+
 #wrapper {
-	background: #7ACF00 url(src/images/bg1.png);
+	background: #7ACF00 url(images/bg1.png);
 }
 
 /* Header */
 
 #header {
 	width: 900px;
-	height: 80px;
+	/*height: 80px;*/
 	margin: 0 auto 20px auto;
 	padding-top: 10px;
 }
@@ -183,7 +184,7 @@ input, textarea, select {
 #content {
 	float: left;
 	width: 590px;
-	padding: 0px 30px 0px 30px;
+	padding:3rem 0;
 }
 
 /* Post */
@@ -203,7 +204,7 @@ input, textarea, select {
 .post .meta {
 	margin: 0;
 	padding: 0 0 60px 0;
-	background: url(src/images/bg3.png) repeat-x left 30%;
+	background: url(images/bg3.png) repeat-x left 30%;
 }
 
 .post .meta p {
@@ -269,7 +270,7 @@ input, textarea, select {
 #sidebar li li a {
 	margin: 0;
 	padding-left: 25px;
-	background: url(src/images/bg3.png) no-repeat left 50%;
+	background: url(images/bg3.png) no-repeat left 50%;
 }
 
 #sidebar h2 {
@@ -303,7 +304,7 @@ input, textarea, select {
 
 #x {
 	padding: 3px;
-	background: #ECECEC url(src/images/bg3.png) repeat-x left bottom;
+	background: #ECECEC url(images/bg3.png) repeat-x left bottom;
 	border: none;
 	text-transform: lowercase;
 	font-size: 11px;
@@ -314,7 +315,7 @@ input, textarea, select {
 
 .box1 {
 	padding: 20px;
-	background: url(src/images/bg4.png) no-repeat;
+	background: url(images/bg4.png) no-repeat;
 }
 
 .box2 {
@@ -323,7 +324,7 @@ input, textarea, select {
 
 .box2 h2 {
 	margin-bottom: 15px;
-	background: url(src/images/bg3.png) repeat-x left bottom;
+	background: url(images/bg3.png) repeat-x left bottom;
 	font-size: 16px;
 	color: #FFFFFF;
 }
@@ -340,17 +341,18 @@ input, textarea, select {
 
 /* Footer */
 
-#footer {
-	height: 400px;
-	min-height: 74px;
-	padding: 10px 0 0 0;
-	background: #979797 url(src/images/bg5.png) repeat-x left top;
+.footer {
+	height: 4rem;
+	min-height:4rem;
+	line-height: 4rem;
+	text-align:right;
+	padding:0 3rem 0 0;
+	background:#3B5998!important;
+	color:#fff;
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
+
 }
 
-html>body #footer {
-	height: auto;
-}
 
 #legal {
 	clear: both;
@@ -377,7 +379,10 @@ div.squar-num{
 
 }
 .outer-wrapper{
-	/*background:url(src/images/bg3.png);*/
+	float:right;
+	border-left:5px solid #3B5998;
+	border-bottom: 5px solid #3B5998;
+	background:url(images/bg3.png);
 }
 div.logo{
 	width:80px;
@@ -385,7 +390,7 @@ div.logo{
 	border:1px solid;
 	display:inline-block;
 	border-radius:50%;
-	background:url(src/images/umbrella.jpg) no-repeat;
+	background:url(images/umbrella.jpg) no-repeat;
 	background-size:80px 80px;
 
 }
@@ -396,6 +401,13 @@ td.theme h1{
 	display:inline-block;
 	color:#FFFFFF;
 	margin:0 0 20px 20px;
+}
+.manage-ctrl{
+	display:inline-block;
+	width:12%;
+	float:left;
+	margin:2rem 0 0 1rem;
+	/*padding:0 10px 1rem 10px;*/
 }
 .manage-ctrl p{
 	border:1px solid #fff;
@@ -427,10 +439,9 @@ td.theme h1{
 
 .scroll-com{
 	/*background-color: #DCDCDC;*/
-	background:url(src/images/bg3.png);
 	/*border:3px solid red;*/
 	display:inline-block;
-	height:450px;
+	height:650px;
 	overflow:scroll;
 
 }
@@ -462,21 +473,30 @@ td.theme h1{
 }
 .container{
 	width:100%;
-	height:760px;
-	background: #3B5998;
-}
-.footer{
-	height:60px;
-	line-height: 60px;
-	position:fixed;
-	background-color:#E7E7E7;
-	left:0;
-	right:0;
-	bottom:0;
+	height:1024px;
+	clear:both;
+	background:url(images/bg4.png);
+	/*background: #3B5998;*/
+	border-bottom:5px solid #3B5998!important;
+	margin-top:3rem;
+	padding:0 0 5rem 0;
 }
 
 td.inputs input{
 	width:80%;
 	height:25px;
 	font-size:16px;
+}
+
+tr.manage-body{
+	background:url(images/bg3.png)!important;
+}
+tr.manage-body table{
+	padding:0 0 2rem 0;
+}
+
+
+.bgclick{
+	background:#3B5998;
+	color:#fff;
 }

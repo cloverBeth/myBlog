@@ -19,23 +19,33 @@ nav.navbar{
 nav div.collapse{
     border:none !important;
 }
+nav div.collapse ul.navbar-nav{
+    margin:0 1rem 0 0;
+    font-size:16px;
+}
 nav div.collapse ul.navbar-nav li a{
     color:#fff;
+    background:#3B5998;
     /*font-size: 16px;*/
 }
+nav div.collapse ul.navbar-nav li a:hover{
+    background:#f0f0f0;
+    color:#3B5998;
+ }
 #brand-rain{
     display:inline-block;
     width:50px;
     height:50px;
     margin-right:1rem;
     border-radius:50%;
-    background:url(src/images/umbrella.jpg)no-repeat;
+    background:url(images/umbrella.jpg)no-repeat;
     background-size:100% 100%;
 
 }
 span.title-blog{
     color:#fff;
     line-height:50px;
+    font-size: 18px;
     display:inline-block;
     margin-right:10px;
 }
@@ -44,6 +54,8 @@ span.title-blog{
     width:90% !important;
     height:55rem;
     overflow:scroll;
+    padding:0 0 4rem 0;
+    overflow-x: hidden;
     /*border:1px solid;*/
 }
 
@@ -69,11 +81,13 @@ span.title-blog{
 #MyBlog {
     /*margin-top: 2rem;*/
 }
-#MyBlog h3.main-title{
+#MyBlog h4.main-title{
     border-bottom:1px solid #e6e6e6;
-    padding-bottom: 15px;
-    font-weight: normal!important;
+    margin:1.5rem 2rem;
+    padding:0 0 15px 25px;
+    font-weight: 300!important;
     color:#3B5998!important;
+    background:url(images/ten.png)no-repeat;
 }
 #MyBlog span{
     display:inline-block;
@@ -86,14 +100,40 @@ span.title-blog{
     background:#fff;
     border-top:5px solid #3B5998;
     height:auto;
-    margin: 4rem 0 0 0;
+    padding:0 0 2.5rem 0;
+    margin: 5rem 0 0 0;
 
 }
-.articles .format-icon{
+.welcome{
+    display:inline-block;
+    /*float:left;*/
+    min-width:300px;
+    /*height:3rem;*/
+    text-align:center;
+    line-height:3rem;
+    color:#fff;
+    margin:-5px 0 0 0;
+    /*border:1px solid;*/
+    font-size:16px;
+}
+.login-out{
+    display:inline-block;
+    border-left:2px solid #fff;
+    color:white;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding:0 1rem;
+    margin:0 1rem;
+    font-size:16px;
+}
+.login-out:hover{
+    color:#999;
+}
+.format-icon{
     position: relative;
-    width:5rem;
-    height:5rem;
-    font-size:3rem;
+    width:4rem;
+    height:4rem;
+    font-size:2rem;
     background:#3B5998;
     color:#fff;
     display: block;
@@ -101,9 +141,9 @@ span.title-blog{
     /*top: -29px;*/
     left: 50%;
     /*z-index: 9;*/
-    text-align: center;
+    text-align:center;
     z-index:9;
-    margin: -1.8rem 0 0 0;
+    margin: -1.6rem 0 0 0;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
@@ -115,7 +155,8 @@ span.title-blog{
     -o-transform-origin: 0 100%;
     transform-origin: 0 100%;
 }
-.articles span.frame-icon{
+
+span.frame-icon{
     display: block;
     clear: both;
     font-size: 3rem;
@@ -126,11 +167,11 @@ span.title-blog{
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    -webkit-transform-origin: 30% 55%;
-    /*-moz-transform-origin: 30% 69%;*/
-    /*-ms-transform-origin: 30% 69%;*/
-    /*-o-transform-origin: 30% 69%;*/
-    /*transform-origin: 20% 69%;*/
+    -webkit-transform-origin: 45% 55%;
+    -moz-transform-origin: 45% 55%;
+    -ms-transform-origin: 45% 55%;
+    -o-transform-origin: 45% 55%;
+    transform-origin: 45% 55%;
 
 }
 
@@ -225,7 +266,7 @@ span.title-blog{
     text-align:left;
     height:auto;
     margin:0 auto;
-    padding:2rem 0 0 0;
+    padding:0;
     /*background:#F4F4F4;*/
 }
 .article-description{
@@ -258,7 +299,7 @@ span.title-blog{
 }
 .article-repeat{
     border-top:5px solid #3B5998;
-    border-bottom:1px solid #999999;
+    /*border-bottom:1px solid #999999;*/
     margin:2rem 0 0 0;
     padding:0 0 2rem 0;
     background:#F4F4F4;
@@ -304,6 +345,7 @@ span.title-blog{
     height:3rem;
     width:13rem;
     border:none;
+    margin:0 0 0 22%;
     color:#fff;
 }
 .comBtn:hover{
@@ -320,7 +362,7 @@ h3.leave{
 .post_comments .comment{
     /*background: rgba(100, 100, 100, 0.1);*/
     background-color: #f7f7f7;
-    height:10rem;
+    height:auto;
     padding: 1.5rem;
     color: #999;
     margin:1.5rem;
@@ -384,3 +426,29 @@ h3.leave{
     width:195px;
 }
 
+
+/*新浪微博*/
+
+
+.img_sina_share{
+    display:none;
+    position:absolute;
+    cursor:pointer;
+}
+
+
+
+
+
+#to_top{
+    width:30px;
+    height:40px;
+    padding:20px;
+    font:14px/20px arial;
+    text-align:center;
+    background:#06c;
+    position:absolute;
+    right:3rem;
+    cursor:pointer;
+    color:#fff
+}
