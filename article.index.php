@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require_once('connect.php');
     $sql = "select * from article order by dateline desc";//按照文章发布顺序排
     $query = mysqli_query($con,$sql);
@@ -49,8 +50,8 @@ require_once('connect.php');
                 <form class="navbar-form" action="login.php" method="post">
 
                     <div class="welcome">
-                        <span> <?php session_start(); echo $_SESSION['email']; ?> , 欢迎回来! </span>
-                        <a href="login.php?action=logout" class="login-out">退出</a>
+                        <span> <?php echo $_SESSION['email']; ?> , 欢迎回来! </span>
+                        <a href="admin/loginOut.php"  class="login-out">退出</a>
                     </div>
                     <div class="form-group">
                         <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"

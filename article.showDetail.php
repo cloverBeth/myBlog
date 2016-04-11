@@ -85,7 +85,7 @@ if($query&&mysqli_num_rows($query)){
             <form class="navbar-form" action="login.php" method="post">
                 <div class="welcome">
                     <span> <?php echo $_SESSION['email']; ?> , 欢迎回来! </span>
-                    <a href="javascript:void(0);" onclick="return <?php session_destroy();?> "class="login-out">退出</a>
+                    <a href="admin/loginOut.php" class="login-out">退出</a>
                 </div>
                 <div class="form-group">
                     <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"
