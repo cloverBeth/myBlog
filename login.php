@@ -17,6 +17,7 @@ $loginnum = mysqli_num_rows($result);
         session_start();
         $row = mysqli_fetch_array($result);  //将数据以索引方式储存在数组中
 //        var_dump($row);
+        $_SESSION['authorized'] = true;
         $_SESSION['email']=$email;
         $_SESSION['pwd']=$pwd;
         echo "<script>alert('登录成功！');window.location.href='article.index.php';</script>";
