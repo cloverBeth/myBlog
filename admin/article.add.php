@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0">
     <title>文章发布</title>
     <link rel="icon" href="../images/umbrella.jpg" mce_href="../images/umbrella" type="image/x-icon" />
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="../bower_components/ueditor/ueditor.config.js"></script>
     <script type="text/javascript" charset="utf-8" src="../bower_components/ueditor/ueditor.all.min.js"> </script>
     <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
@@ -78,7 +79,7 @@
         toolbars: [
             ['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily', 'justifyleft',
                 'justifyright', 'justifycenter', 'justifyjustify', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
-                'imagenone', 'imageleft', 'imageright', 'imagecenter', '|', 'insertimage', 'emotion', 'insertvideo', 'music', 'insertcode', 'background',
+                'insertimage', 'emotion', 'insertvideo', 'music', 'insertcode', 'background',
                 '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'link', 'unlink', 'emotion', 'help']
         ]
     });

@@ -4,4 +4,14 @@ session_start();
 //unset($_SESSION['admin']);
 unset($_SESSION['authorized']);
 session_destroy();
+
+if($_GET['action'] == "logout"){
+    unset($_SESSION['admin']);
+
+    session_destroy();
+
+echo "点我<a href='../article.index.php'>返回</a>";
+}
+
+
 ?>

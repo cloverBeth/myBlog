@@ -31,6 +31,7 @@ require_once('connect.php');
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
+
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#example1">
                     <span class="sr-only">Toggle navigation</span>
@@ -38,8 +39,8 @@ require_once('connect.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand"id="brand-rain"></a>
-                <span class="title-blog">我的博客 </span class>
+                <a href="#" class="navbar-brand" id="brand-rain"></a>
+                <span class="title-blog">我的博客 </span>
 
             </div>
             <div class="collapse navbar-collapse"id="example1">
@@ -47,21 +48,22 @@ require_once('connect.php');
                     <li class="active"><a href="#MyBlog" role="tab" data-toggle="tab">首页</a></li>
                     <li><a href="#tab-safari" role="tab" data-toggle="tab">关于我</a></li>
                 </ul>
-                <form class="navbar-form" action="login.php" method="post">
+                <form class="navbar-form" action="admin/login.php" method="post">
 
                     <div class="welcome">
                         <span> <?php echo $_SESSION['email']; ?> , 欢迎回来! </span>
-                        <a href="admin/loginOut.php"  class="login-out">退出</a>
+                        <?php echo '<a href="admin/loginOut.php?action=logout" class="login-out">注销</a>'?>
+<!--                        <a href="article.index.php" action="admin/loginOut.php"  >退出</a>-->
                     </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"
-                               id="login_email" required="required">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" placeholder="请输入密码..." name="login_pwd" class="form-control" id="login_pwd"
-                               required="required">
-                    </div>
-                    <input type="submit" class="btn btn-default" data-toggle="modal" data-target="#successful" name="button"
+<!--                    <div class="form-group">-->
+<!--                        <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"-->
+<!--                               id="login_email" required="required">-->
+<!--                    </div>-->
+<!--                    <div class="form-group">-->
+<!--                        <input type="password" placeholder="请输入密码..." name="login_pwd" class="form-control" id="login_pwd"-->
+<!--                               required="required">-->
+<!--                    </div>-->
+                    <input type="button" class="btn nav-login-btn" data-toggle="modal" data-target="#successful" name="button"
                            id="button" value="登录" />
                     <a href="#" class="btn btn-default" data-toggle="modal"
                        data-target="#about-modal">注册</a>
@@ -97,7 +99,7 @@ require_once('connect.php');
                                    required="required">
 
                         </div>
-                        <input type="submit" data-toggle="modal" data-target="#successful" name="button" id="button" value="注册" />
+                        <input type="submit" class='register-btn-index'data-toggle="modal" data-target="#successful" name="button" id="button" value="注册" />
 
                     </form>
                 </div>
@@ -106,6 +108,38 @@ require_once('connect.php');
         </div>
     </div>
 <!--注册模态框结束-->
+
+<!--登录模态框-->
+<div class="modal fade" id="successful" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title" id="modal-label">登录</h4>
+            </div>
+            <div class="modal-body">
+                <form name="register" id="register" method="post" action="admin/login.php">
+                    <div class="form-group">
+                        <label for="recipient-name" class="control-label">登录名:</label>
+                        <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"
+                               id="login_email" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="control-label">密码:</label>
+                            <input type="password" placeholder="请输入密码..." name="login_pwd" class="form-control" id="login_pwd"
+                                   required="required">
+
+                    </div>
+                    <input type="submit" class='register-btn-index'data-toggle="modal" data-target="#successful" name="button" id="button" value="登录" />
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <div class="content-wrapper container-fluid tab-content">
 <!--Mylog begin-->
@@ -177,7 +211,8 @@ require_once('connect.php');
                         <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
                                 class="glyphicon glyphicon-chevron-right"></span></a>
                     </div>
-                </div><!--轮播图结束-->
+                </div>
+                <!--轮播图结束-->
 
                 <div class="article-detail container-fluid">
 
@@ -187,7 +222,7 @@ require_once('connect.php');
                     }else{
                         foreach($data as $value){
                 ?>
-
+                <!--文章列表-->
                 <div class="article-repeat row">
 
                     <div class="blog-sub-title row">
@@ -228,24 +263,71 @@ require_once('connect.php');
             </div>
 
         </div>
-
+<!--个人信息-->
         <div class="tab-pane" id="tab-safari">
-            <div class="row feature">
-                <div class="col-md-7">
-
-                    <h2 class="feature-heading">Safari <span class="text-muted">Mac用户首选</span></h2>
-
-                    <p class="lead">Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。
-                        Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+            <div class="row">
+                <h4 class="main-title">
+                    个人信息
+                </h4>
+                <div class="blog-sub-title row">
+                    <div class="clear"></div>
+                    <h3>黄娜珠</h3>
+                    <div class="clear"></div>
                 </div>
-                <div class="col-md-5">
-                    <img class="feature-image img-responsive" src="images/safari-logo.jpg"
-                         alt="Safari">
-                </div>
+                <ul class="about-me col-sm-5">
+
+                    <li>
+                        <i class="glyphicon glyphicon-user"></i>
+                        <label>Name</label>
+                        <span class="value">黄娜珠</span>
+                        <div class="clear"></div>
+                    </li>
+
+                    <li>
+                        <i class="glyphicon glyphicon-calendar"></i>
+                        <label>Date of birth</label>
+                        <span class="value">10,10,1993</span>
+                        <div class="clear"></div>
+                    </li>
+
+                    <li>
+                        <i class="glyphicon glyphicon-map-marker"></i>
+                        <label>Adress</label>
+                        <span class="value">JiangXi FuZhou</span>
+                        <div class="clear"></div>
+                    </li>
+
+                    <li>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        <label>Email</label>
+                        <span class="value">15851412061@163.com</span>
+                        <div class="clear"></div>
+                    </li>
+
+                    <li>
+                        <i class="glyphicon glyphicon-phone"></i>
+                        <label>Phone</label>
+                        <span class="value">15851412061</span>
+                        <div class="clear"></div>
+                    </li>
+
+                    <li>
+                        <i class="glyphicon glyphicon-globe"></i>
+                        <label>Website</label>
+                        <span class="value"><a href="#" target="_blank">www.Blog.com</a></span>
+                        <div class="clear"></div>
+                    </li>
+
+                </ul>
             </div>
         </div>
     </div>
 <img id="imgSinaShare" class="img_sina_share" title="将选中内容分享到新浪微博" src="http://simg.sinajs.cn/blog7style/images/common/share.gif" />
+
+
+
+
+
 
 
 <!--Myblog end-->
@@ -290,7 +372,7 @@ require_once('connect.php');
         });
     });
 
-
+    //新浪微博分享
     var eleImgShare = document.getElementById("imgSinaShare");
 
     var $sinaMiniBlogShare = function(eleShare, eleContainer) {

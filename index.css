@@ -81,7 +81,7 @@ span.title-blog{
 #MyBlog {
     /*margin-top: 2rem;*/
 }
-#MyBlog h4.main-title{
+.main-title{
     border-bottom:1px solid #e6e6e6;
     margin:1.5rem 2rem;
     padding:0 0 15px 25px;
@@ -451,4 +451,56 @@ h3.leave{
     right:3rem;
     cursor:pointer;
     color:#fff
+}
+
+.register-btn-index{
+    border: none;
+    background: #1E489E;
+    color: white;
+    width: 35%;
+    height:35px;
+    line-height: 32px;
+    font-weight:bold;
+}
+
+/*关于我的样式*/
+.about-me{
+    /*width:400px;*/
+    margin:30px 0 0 0;
+}
+.about-me li{
+    width:100%;
+    list-style: none;
+    border-bottom:1px solid #e6e6e6;
+    margin:10px 0;
+}
+.about-me li label,.about-me li i{
+    color:#3a87ad;
+}
+.about-me li span {
+    width: 60%;
+    text-align: left;
+    float: right;
+}
+
+/*动画*/
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.article-repeat{
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+.nav-login-btn{
+    background:#00FF7A;
 }

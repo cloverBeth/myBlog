@@ -82,21 +82,23 @@ if($query&&mysqli_num_rows($query)){
                 <li class=""><a href="article.index.php">首页</a></li>
 <!--                <li><a href="article.index.php">AboutMe</a></li>-->
             </ul>
-            <form class="navbar-form" action="login.php" method="post">
+            <form class="navbar-form" action="admin/login.php" method="post">
                 <div class="welcome">
                     <span> <?php echo $_SESSION['email']; ?> , 欢迎回来! </span>
-                    <a href="admin/loginOut.php" class="login-out">退出</a>
+                    <?php echo '<a href="admin/loginOut.php?action=logout" class="login-out">注销</a>'?>
+
+                    <!--                    <a href="admin/loginOut.php" class="login-out">退出</a>-->
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"
-                           id="login_email" required="required">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="请输入密码..." name="login_pwd" class="form-control" id="login_pwd"
-                           required="required">
-                </div>
-                <input type="submit" class="btn btn-default" data-toggle="modal" data-target="#successful" name="button"
-                       id="button" value="登录" />
+<!--                <div class="form-group">-->
+<!--                    <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"-->
+<!--                           id="login_email" required="required">-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <input type="password" placeholder="请输入密码..." name="login_pwd" class="form-control" id="login_pwd"-->
+<!--                           required="required">-->
+<!--                </div>-->
+<!--                <input type="submit" class="btn btn-default" data-toggle="modal" data-target="#successful" name="button"-->
+<!--                       id="button" value="登录" />-->
                 <a href="#" class="btn btn-default" data-toggle="modal"
                    data-target="#about-modal">注册
                 </a>
@@ -290,14 +292,14 @@ if($query&&mysqli_num_rows($query)){
                         <div class="form-group">
                             <label for="comment_author" class="col-sm-2 control-label required">Your name</label>
                             <div class="col-sm-6 col-lg-6">
-                                <input type="text" class="form-control" name="comment_author" id="comment_author" value=""placeholder="请输入昵称" tabindex="1" required="required">
+                                <input type="text" class="form-control" name="comment_author" id="comment_author" value="" placeholder="请输入邮箱" tabindex="1" required="required">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="email" class="col-sm-2 control-label required">Your email</label>
                             <div class="col-sm-6 col-lg-6">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="请输入合法邮箱" value="" tabindex="2" required="required">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="请输入合法邮箱" value="<?php echo $_SESSION['email']?>" tabindex="2" required="required">
                             </div>
                         </div>
                         <div class="form-group">
@@ -309,7 +311,11 @@ if($query&&mysqli_num_rows($query)){
                         <div class="form-group">
                             <div class="col-sm-4 col-lg-6 col-lg-offset-3">
                                 <input type="hidden" name="comment_post_ID" value="<?php echo $commens['topic_id']?>" id="comment_post_ID" />
-                                <input name="submit" class="comBtn" type="submit" value="Submit comment" />
+                                <?php if($_SESSION['email']==null){
+                                echo '请先<a href="article.index.php">登录</a>再评论哦!';}else{
+                                    echo '<input name="submit" class="comBtn" type="submit" value="发送评论" />';
+                                }
+                                ?>
                             </div>
                         </div>
                     </form>
@@ -341,7 +347,8 @@ if($query&&mysqli_num_rows($query)){
                 var urlstatus=false;
                 $("ul#nav-style li").each(function () {
                     if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
-                        $(this).addClass('active'); urlstatus = true;
+                        $(this).addClass('active');
+                        urlstatus = true;
                     } else {
                         $(this).removeClass('active');
                     }
@@ -351,6 +358,7 @@ if($query&&mysqli_num_rows($query)){
                 }
 
             });
+
             var eleImgShare = document.getElementById("imgSinaShare");
 
             var $sinaMiniBlogShare = function(eleShare, eleContainer) {

@@ -1,6 +1,5 @@
 <?php
 require_once('../connect.php');
-session_id(SID);
 session_start();
 $email = $_POST['reg_email'];
 $password = $_POST['reg_pwd'];
