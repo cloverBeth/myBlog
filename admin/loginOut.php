@@ -10,7 +10,7 @@ if($_GET['action'] == "logout"){
 
     session_destroy();
 
-echo "点我<a href='../article.index.php'>返回</a>";
+echo "点我<a href='article.index.php'>返回</a>";
 }
 
 

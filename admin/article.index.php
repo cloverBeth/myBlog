@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once('connect.php');
+require_once('../config/connect.php');
     $sql = "select * from article order by dateline desc";//按照文章发布顺序排
     $query = mysqli_query($con,$sql);
     if($query && mysqli_num_rows($query)){//mysqli_num_rows($query)检验结果集数据条数
@@ -17,14 +17,18 @@ require_once('connect.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>博文首页</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="icon" href="images/umbrella.jpg" mce_href="images/umbrella" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="../images/umbrella.jpg" mce_href="images/umbrella" type="image/x-icon" />
+    <link href="../bower_components/lightBox/style.css" rel="stylesheet" type="text/css" />
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/lightBox/lib/jquery-1.8.2.min.js"></script>
+    <script src="../bower_components/lightBox/lib/jquery.notesforlightbox.js" type="text/javascript"></script>
+    <link href="../bower_components/lightBox/jquery.notesforlightbox.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -48,11 +52,11 @@ require_once('connect.php');
                     <li class="active"><a href="#MyBlog" role="tab" data-toggle="tab">首页</a></li>
                     <li><a href="#tab-safari" role="tab" data-toggle="tab">关于我</a></li>
                 </ul>
-                <form class="navbar-form" action="admin/login.php" method="post">
+                <form class="navbar-form" action="login.php" method="post">
 
                     <div class="welcome">
                         <span> <?php echo $_SESSION['email']; ?> , 欢迎回来! </span>
-                        <?php echo '<a href="admin/loginOut.php?action=logout" class="login-out">注销</a>'?>
+                        <?php echo '<a href="loginOut.php?action=logout" class="login-out">注销</a>' ?>
 <!--                        <a href="article.index.php" action="admin/loginOut.php"  >退出</a>-->
                     </div>
 <!--                    <div class="form-group">-->
@@ -87,7 +91,7 @@ require_once('connect.php');
                     <h4 class="modal-title" id="modal-label">注册</h4>
                 </div>
                 <div class="modal-body">
-                    <form name="register" id="register" method="post" action="admin/resgister.php">
+                    <form name="register" id="register" method="post" action="resgister.php">
                         <div class="form-group">
                             <label for="recipient-name" class="control-label">邮箱注册:</label>
                             <input type="email" placeholder="请输入注册邮箱" name="reg_email" class="form-control" id="reg_email"
@@ -120,7 +124,7 @@ require_once('connect.php');
                 <h4 class="modal-title" id="modal-label">登录</h4>
             </div>
             <div class="modal-body">
-                <form name="register" id="register" method="post" action="admin/login.php">
+                <form name="register" id="register" method="post" action="login.php">
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">登录名:</label>
                         <input type="text" placeholder="请输入邮箱..." name="login_email" class="form-control"
@@ -165,7 +169,7 @@ require_once('connect.php');
                     </ol>
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="images/blog-1.jpg" width="100%" height="100%" alt="1 slide">
+                            <img src="../images/blog-1.jpg" width="100%" height="100%" alt="1 slide">
 
                             <div class="container">
                                 <div class="carousel-caption">
@@ -175,7 +179,7 @@ require_once('connect.php');
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/blog-2.jpg"  width="100%" height="100%" alt="2 slide">
+                            <img src="../images/blog-2.jpg" width="100%" height="100%" alt="2 slide">
 
                             <div class="container">
                                 <div class="carousel-caption">
@@ -186,7 +190,7 @@ require_once('connect.php');
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/blog-3.jpg" width="100%" height="100%" alt="3 slide">
+                            <img src="../images/blog-3.jpg" width="100%" height="100%" alt="3 slide">
 
                             <div class="container">
                                 <div class="carousel-caption">
@@ -196,7 +200,7 @@ require_once('connect.php');
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/blog-4.jpg" width="100%" height="100%" alt="4 slide">
+                            <img src="../images/blog-4.jpg" width="100%" height="100%" alt="4 slide">
 
                             <div class="container">
                                 <div class="carousel-caption">
@@ -319,6 +323,76 @@ require_once('connect.php');
                     </li>
 
                 </ul>
+            </div>
+            <div class="row">
+                <div class="blog-sub-title row">
+                    <div class="clear"></div>
+                    <h3>我的相册</h3>
+                    <div class="clear"></div>
+                </div>
+
+                <div id="divtest" >
+                    <div class="content">
+                        <div class="divPics">
+                            <ul class="row">
+                                <li class="col-sm-3">
+                                    <a href="../images/red_galss.jpg" title="第1张">
+                                        <img src="../images/red_galss.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="../images/cuteCat.jpg" title="第2张">
+                                    <img src="../images/cuteCat.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="../images/shy.jpg" title="第3张">
+                                    <img src="../images/shy.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="../images/lion_cat.jpg" title="第4张">
+                                        <img src="../images/lion_cat.jpg" alt="" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="row">
+
+                                <li class="col-sm-3">
+                                    <a href="../images/dog_yoga.jpg" title="第5张">
+                                        <img src="../images/dog_yoga.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="../images/oil_flow.jpg" title="第6张">
+                                        <img src="../images/oil_flow.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="../images/dolphin.jpg" title="第7张">
+                                        <img src="../images/dolphin.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li class="col-sm-3">
+                                    <a href="../images/elephant.jpg" title="第8张">
+                                        <img src="../images/elephant.jpg" alt="" />
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(function () {
+                        $(".divPics a").lightBox({
+                            overlayBgColor: "#666", //图片浏览时的背景色
+                            overlayOpacity: 0.5, //背景色的透明度
+                            containerResizeSpeed: 600 //图片切换时的速度
+                        })
+                    });
+                </script>
             </div>
         </div>
     </div>

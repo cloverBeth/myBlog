@@ -38,7 +38,7 @@ nav div.collapse ul.navbar-nav li a:hover{
     height:50px;
     margin-right:1rem;
     border-radius:50%;
-    background:url(images/umbrella.jpg)no-repeat;
+    background:url(../images/umbrella.jpg)no-repeat;
     background-size:100% 100%;
 
 }
@@ -87,7 +87,7 @@ span.title-blog{
     padding:0 0 15px 25px;
     font-weight: 300!important;
     color:#3B5998!important;
-    background:url(images/ten.png)no-repeat;
+    background:url(../images/ten.png)no-repeat;
 }
 #MyBlog span{
     display:inline-block;

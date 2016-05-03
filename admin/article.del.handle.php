@@ -1,5 +1,5 @@
 <?php
-require_once('../connect.php');
+require_once('../config/connect.php');
 $id=$_GET['id'];
 $delete = "delete from article where id=$id";
     if (mysqli_query($con, $delete)) {

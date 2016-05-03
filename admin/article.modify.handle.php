@@ -1,5 +1,5 @@
 <?php
-require_once('../connect.php');
+require_once('../config/connect.php');
 $id=intval($_POST['id']);
 $title=$_POST['title'];
 $author=$_POST['author'];

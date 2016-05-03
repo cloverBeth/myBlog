@@ -1,0 +1,55 @@
+#divtest
+{
+    /*width: 282px;*/
+    margin:20px 0 0 0;
+    padding:0;
+}
+#divtest .title
+{
+    padding: 8px;
+    background-color: Blue;
+    color: #fff;
+    height: 23px;
+    line-height: 23px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#divtest .content
+{
+    padding: 8px 0px;
+    /*background-color: #fff;*/
+    font-size: 13px;
+}
+#divtest .content .divPics ul
+{
+    list-style: none;
+    padding: 0px;
+    margin:10px 0 0 0;
+}
+#divtest .content .divPics ul li
+{
+    display: inline;
+}
+#divtest .content .divPics ul img
+{
+    border: 2px solid #444;
+    width: 90%;
+    height:100%;
+}
+#divtest .content .divPics ul a:hover img
+{
+    border: 2px solid #fff;
+    color: #fff;
+}
+#divtest .content .divPics ul a:hover
+{
+    color: #fff;
+}
+.fl
+{
+    float: left;
+}
+.fr
+{
+    float: right;
+}

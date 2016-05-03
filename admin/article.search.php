@@ -1,5 +1,5 @@
 <?php
-require_once('connect.php');
+require_once('../config/connect.php');
 $key = $_GET['key'];
 $sql = "select * from article where title like '%$key%' order by dateline desc";
 $query = mysqli_query($con,$sql);
@@ -16,7 +16,7 @@ if($query&&mysqli_num_rows($query)){
     <title>文章发布系统</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link href="default.css" rel="stylesheet" type="text/css" />
+    <link href="../css/default.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
@@ -30,7 +30,7 @@ if($query&&mysqli_num_rows($query)){
             <ul>
                 <li class="active"><a href="article.list.php">文章</a></li>
                 <li><a href="about.php">关于我们</a></li>
-                <li><a href="contact.php">联系我们</a></li>
+                <li><a href="../contact.php">联系我们</a></li>
             </ul>
         </div>
     </div>

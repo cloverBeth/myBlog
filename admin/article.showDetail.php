@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('connect.php');
+require_once('../config/connect.php');
 
 $id = intval($_GET['id']);//intval()转换为整数类型
 $sql = "select * from article where id=$id";
@@ -52,14 +52,14 @@ if($query&&mysqli_num_rows($query)){
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>文章详情</title>
 
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="icon" href="images/umbrella.jpg" mce_href="images/umbrella" type="image/x-icon" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="icon" href="../images/umbrella.jpg" mce_href="images/umbrella" type="image/x-icon" />
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
 
 </head>
 <body>
@@ -82,10 +82,10 @@ if($query&&mysqli_num_rows($query)){
                 <li class=""><a href="article.index.php">首页</a></li>
 <!--                <li><a href="article.index.php">AboutMe</a></li>-->
             </ul>
-            <form class="navbar-form" action="admin/login.php" method="post">
+            <form class="navbar-form" action="login.php" method="post">
                 <div class="welcome">
                     <span> <?php echo $_SESSION['email']; ?> , 欢迎回来! </span>
-                    <?php echo '<a href="admin/loginOut.php?action=logout" class="login-out">注销</a>'?>
+                    <?php echo '<a href="loginOut.php?action=logout" class="login-out">注销</a>' ?>
 
                     <!--                    <a href="admin/loginOut.php" class="login-out">退出</a>-->
                 </div>
@@ -122,7 +122,7 @@ if($query&&mysqli_num_rows($query)){
                 <h4 class="modal-title" id="modal-label">注册</h4>
             </div>
             <div class="modal-body">
-                <form name="register" id="register" method="post" action="admin/resgister.php">
+                <form name="register" id="register" method="post" action="resgister.php">
                     <div class="form-group">
                         <label for="recipient-name" class="control-label">邮箱注册:</label>
                         <input type="email" placeholder="请输入注册邮箱" name="reg_email" class="form-control" id="reg_email"
@@ -268,7 +268,7 @@ if($query&&mysqli_num_rows($query)){
                     <div class="comments">
 
                         <div class="comment row" style="font-family:Comic Sans MS;font-size:14px;">
-                            <img src="images/header.png" width="100" height="100" alt="img" />
+                            <img src="../images/header.png" width="100" height="100" alt="img" />
                             <div class="text">
                                 <div class="name"><?php echo $commens['username']?><a class="reply" href="#">Reply</a></div>
                                 <div class="date"><?php $ld=$commens['pubTime']; echo date("Y-m-d H:m",$ld)?></div>

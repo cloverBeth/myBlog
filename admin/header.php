@@ -1,6 +1,6 @@
 <?php
     echo "
-        <div style='position:fixed;top:0;right:0;border-bottom:5px solid #fff;left:0;height:8rem;background:#3B5998;color:#fff !important;'>
+        <div style='position:fixed;top:0;right:0;left:0;background:#3B5998;box-shadow:3px 3px 3px #fff;color:#fff !important;z-index:100;'>
             <div style='width:5rem;height:5rem;margin:1.5rem 0 0 3rem;border-radius:50%;display:inline-block;
             background:url(../images/umbrella.jpg)no-repeat;background-size:100% 100%;'>
             </div>

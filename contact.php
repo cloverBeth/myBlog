@@ -13,7 +13,7 @@ if($query&&mysqli_num_rows($query)){
     <title>文章发布系统</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <link href="default.css" rel="stylesheet" type="text/css" />
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="wrapper">
