@@ -2,49 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4510c37-accb-4f0f-9bcf-7a395150af24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/pics/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/pics/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/pics/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/brush.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/cuteCat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/dog_yoga.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/dolphin.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/elephant.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/end_bg2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/end_bg3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/fish_blue.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/key_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lion_cat.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/oil_flow.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/red_galss.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/shy.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/user_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/end-login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin/end.login.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/jquery.notesforlightbox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/lib/jquery-1.8.2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/lib/jquery.form.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/lib/jquery.notesforlightbox.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/lightBox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower_components/lightBox/style.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/article.index.php" afterPath="$PROJECT_DIR$/admin/article.index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/article.search.php" afterPath="$PROJECT_DIR$/admin/article.search.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/article.showDetail.php" afterPath="$PROJECT_DIR$/admin/article.showDetail.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/connect.php" afterPath="$PROJECT_DIR$/config/connect.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/default.css" afterPath="$PROJECT_DIR$/css/default.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/index.css" afterPath="$PROJECT_DIR$/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/article.add.handle.php" afterPath="$PROJECT_DIR$/admin/article.add.handle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/article.add.php" afterPath="$PROJECT_DIR$/admin/article.add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/article.del.handle.php" afterPath="$PROJECT_DIR$/admin/article.del.handle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/article.manage.php" afterPath="$PROJECT_DIR$/admin/article.manage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/article.modify.handle.php" afterPath="$PROJECT_DIR$/admin/article.modify.handle.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/article.modify.php" afterPath="$PROJECT_DIR$/admin/article.modify.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/header.php" afterPath="$PROJECT_DIR$/admin/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/loginOut.php" afterPath="$PROJECT_DIR$/admin/loginOut.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/resgister.php" afterPath="$PROJECT_DIR$/admin/resgister.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.php" afterPath="$PROJECT_DIR$/contact.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/default.css" afterPath="$PROJECT_DIR$/css/default.css" />
     </list>
     <ignored path="apms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,20 +37,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.380727">
-              <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_logo.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/user_logo.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="umbrella.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/umbrella.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="end-login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/end-login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.516129">
+            <state vertical-scroll-proportion="-10.645162">
               <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding />
             </state>
@@ -111,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.064516">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.40916273">
+              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
               <folding>
                 <marker date="1462261939000" expanded="true" signature="290:353" placeholder="select email... users" />
               </folding>
@@ -139,8 +111,8 @@
       <file leaf-file-name="default.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/default.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.096774">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state vertical-scroll-proportion="-3.048387">
+              <caret line="432" column="11" selection-start-line="432" selection-start-column="11" selection-end-line="432" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -281,6 +253,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="apms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="apms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -524,20 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bower_components/jquery/src/css/var/swap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26273885">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42038217">
@@ -896,24 +868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/end-login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.516129">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.064516">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="49" />
-          <folding>
-            <marker date="1462261939000" expanded="true" signature="290:353" placeholder="select email... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/end.login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.096774">
@@ -924,19 +878,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/default.css">
+    <entry file="file://$PROJECT_DIR$/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.096774">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="236" column="0" selection-start-line="236" selection-start-column="0" selection-end-line="236" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
+    <entry file="file://$PROJECT_DIR$/images/user_logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/umbrella.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/end-login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.380727">
-          <caret line="125" column="18" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
+        <state vertical-scroll-proportion="-10.645162">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.048387">
+          <caret line="432" column="11" selection-start-line="432" selection-start-column="11" selection-end-line="432" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40916273">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <marker date="1462261939000" expanded="true" signature="290:353" placeholder="select email... users" />
+          </folding>
         </state>
       </provider>
     </entry>

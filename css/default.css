@@ -543,9 +543,11 @@ tr.manage-body table{
 .logo-header{
 	position:relative;
 	top:-20px;
-	background:url(../images/end_bg2.jpg)no-repeat;
+	background:url(../images/umbrella.jpg)no-repeat;
+	background-size:100% 100%;
 	width:90px;
 	height:90px;
+	border-radius:10px;
 	z-index:100;
 	margin:0 auto;
 }
