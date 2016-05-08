@@ -41,6 +41,8 @@ $showPage=3;
         <div class="manage-ctrl pull-left col-sm-2" align="center">
             <p><a class="nav-light"href="article.add.php">发布文章</a></p>
             <p><a class="nav-light"href="article.manage.php?p=1">管理文章</a></p>
+            <p><a class="nav-light"href="end.login.php?action=loginout">退出登录</a></p>
+
         </div>
         <div class="pull-right col-sm-10">
             <div class="table-responsive">

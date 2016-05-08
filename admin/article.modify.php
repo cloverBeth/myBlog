@@ -38,6 +38,7 @@
         <div class="manage-ctrl pull-left col-sm-2" align="center">
             <p><a class="nav-light"href="article.add.php">发布文章</a></p>
             <p><a class="nav-light"href="article.manage.php?p=1">管理文章</a></p>
+            <p><a class="nav-light"href="end.login.php?action=loginout">退出登录</a></p>
         </div>
         <div class="pull-right col-sm-10">
             <form id="form1" name="form1" method="post" action="article.modify.handle.php">
@@ -51,7 +52,7 @@
                             </tr>
                             <tr>
                                 <td >标题</td>
-                                <td>
+                                <td class="inputs">
                                     <label for="title"></label>
                                     <input type="text" name="title" id="title" value="<?php echo $data['title']?>"/>
                                 </td>
@@ -70,7 +71,7 @@
                                 <td><textarea name="content" cols="60" rows="20" id="content"><?php echo $data['content']?></textarea></td>
                             </tr>
                             <tr>
-                                <td colspan="2" class="btn-submit"align="right">
+                                <td colspan="2" class="btn-submit"align="center">
                                     <input type="submit" name="button" id="button" value="提交" />
                                 </td>
                             </tr>
