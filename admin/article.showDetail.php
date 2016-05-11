@@ -326,6 +326,9 @@ if($query&&mysqli_num_rows($query)){
 
         </div>
     </div>
+    <div class="footer blog-footer">
+        <div>&copy;sunnyPig</div>
+    </div>
     <img id="imgSinaShare" class="img_sina_share" title="将选中内容分享到新浪微博" src="http://simg.sinajs.cn/blog7style/images/common/share.gif" />
 
 <!--</div>-->

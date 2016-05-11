@@ -396,6 +396,9 @@ require_once('../config/connect.php');
             </div>
         </div>
     </div>
+    <div class="footer blog-footer">
+        <div>&copy;sunnyPig</div>
+    </div>
 <img id="imgSinaShare" class="img_sina_share" title="将选中内容分享到新浪微博" src="http://simg.sinajs.cn/blog7style/images/common/share.gif" />
 
 
@@ -404,82 +407,82 @@ require_once('../config/connect.php');
 
 
 
-<!--Myblog end-->
-<script>
-    $(document).ready(function (){
-//        $("ul#nav-style li").each(function(index){
-//            $(this).click(function(){
-//                $("ul#nav-style li").removeClass("active");
-//                $("li").eq(index).addClass("active");
-//            });
-//        });
+        <!--Myblog end-->
+        <script>
+            $(document).ready(function (){
+        //        $("ul#nav-style li").each(function(index){
+        //            $(this).click(function(){
+        //                $("ul#nav-style li").removeClass("active");
+        //                $("li").eq(index).addClass("active");
+        //            });
+        //        });
 
-        $(".table1").css('display','none');
-        var urlstr = location.href;
-        //alert((urlstr + '/').indexOf($(this).attr('href')));
-        var urlstatus=false;
-        $("ul#nav-style li").each(function () {
-            if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
-                $(this).addClass('active'); urlstatus = true;
-            } else {
-                $(this).removeClass('active');
-            }
-        });
-        if (!urlstatus) {
-            $("ul#nav-style li").eq(0).addClass('active');
-        }
-
-    });
-
-    $(function () {
-        $('#ad-carousel').carousel();
-        $('#menu-nav .navbar-collapse a').click(function (e) {
-            var href = $(this).attr('href');
-            var tabId = $(this).attr('data-tab');
-            if ('#' !== href) {
-                e.preventDefault();
-//                $(document).scrollTop($(href).offset().top - 70);
-                if (tabId) {
-                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                $(".table1").css('display','none');
+                var urlstr = location.href;
+                //alert((urlstr + '/').indexOf($(this).attr('href')));
+                var urlstatus=false;
+                $("ul#nav-style li").each(function () {
+                    if ((urlstr + '/').indexOf($(this).attr('href')) > -1&&$(this).attr('href')!='') {
+                        $(this).addClass('active'); urlstatus = true;
+                    } else {
+                        $(this).removeClass('active');
+                    }
+                });
+                if (!urlstatus) {
+                    $("ul#nav-style li").eq(0).addClass('active');
                 }
-            }
-        });
-    });
 
-    //新浪微博分享
-    var eleImgShare = document.getElementById("imgSinaShare");
+            });
 
-    var $sinaMiniBlogShare = function(eleShare, eleContainer) {
-        var eleTitle = document.getElementsByTagName("title")[0];
-        eleContainer = eleContainer || document;
-        var funGetSelectTxt = function() {
-            var txt = "";
-            if(document.selection) {
-                txt = document.selection.createRange().text;	// IE
-            } else {
-                txt = document.getSelection();
-            }
-            return txt.toString();
-        };
-        eleContainer.onmouseup = function(e) {
-            e = e || window.event;
-            var txt = funGetSelectTxt(), sh = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-            var left = (e.clientX - 40 < 0) ? e.clientX + 20 : e.clientX - 40, top = (e.clientY - 40 < 0) ? e.clientY + sh + 20 : e.clientY + sh - 40;
-            if (txt) {
-                eleShare.style.display = "inline";
-                eleShare.style.left = left + "px";
-                eleShare.style.top = top + "px";
-            } else {
-                eleShare.style.display = "none";
-            }
-        };
-        eleShare.onclick = function() {
-            var txt = funGetSelectTxt(), title = (eleTitle && eleTitle.innerHTML)? eleTitle.innerHTML : "未命名页面";
-            if (txt) {
-                window.open('http://v.t.sina.com.cn/share/share.php?title=' + txt + '→来自页面"' + title + '"的文字片段&url=' + window.location.href);
-            }
-        };
-    }(eleImgShare);
-</script>
+            $(function () {
+                $('#ad-carousel').carousel();
+                $('#menu-nav .navbar-collapse a').click(function (e) {
+                    var href = $(this).attr('href');
+                    var tabId = $(this).attr('data-tab');
+                    if ('#' !== href) {
+                        e.preventDefault();
+        //                $(document).scrollTop($(href).offset().top - 70);
+                        if (tabId) {
+                            $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                        }
+                    }
+                });
+            });
+
+            //新浪微博分享
+            var eleImgShare = document.getElementById("imgSinaShare");
+
+            var $sinaMiniBlogShare = function(eleShare, eleContainer) {
+                var eleTitle = document.getElementsByTagName("title")[0];
+                eleContainer = eleContainer || document;
+                var funGetSelectTxt = function() {
+                    var txt = "";
+                    if(document.selection) {
+                        txt = document.selection.createRange().text;	// IE
+                    } else {
+                        txt = document.getSelection();
+                    }
+                    return txt.toString();
+                };
+                eleContainer.onmouseup = function(e) {
+                    e = e || window.event;
+                    var txt = funGetSelectTxt(), sh = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                    var left = (e.clientX - 40 < 0) ? e.clientX + 20 : e.clientX - 40, top = (e.clientY - 40 < 0) ? e.clientY + sh + 20 : e.clientY + sh - 40;
+                    if (txt) {
+                        eleShare.style.display = "inline";
+                        eleShare.style.left = left + "px";
+                        eleShare.style.top = top + "px";
+                    } else {
+                        eleShare.style.display = "none";
+                    }
+                };
+                eleShare.onclick = function() {
+                    var txt = funGetSelectTxt(), title = (eleTitle && eleTitle.innerHTML)? eleTitle.innerHTML : "未命名页面";
+                    if (txt) {
+                        window.open('http://v.t.sina.com.cn/share/share.php?title=' + txt + '→来自页面"' + title + '"的文字片段&url=' + window.location.href);
+                    }
+                };
+            }(eleImgShare);
+        </script>
 </body>
 </html>

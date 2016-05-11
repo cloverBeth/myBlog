@@ -504,3 +504,16 @@ h3.leave{
 .nav-login-btn{
     background:#00FF7A;
 }
+
+
+.blog-footer{
+    background:#3B5998;
+    color:#fff;
+    height:50px;
+    line-height:50px;
+    padding:0 0 0 20px;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+}

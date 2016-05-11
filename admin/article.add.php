@@ -74,20 +74,17 @@
         </div>
     </div>
     <div class="footer"><strong>版权所有&copy;</strong></div>
-
-
-    <script type="text/javascript">
-    var ue=UE.getEditor('content',{
-        toolbars: [
-            ['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily', 'justifyleft',
-                'justifyright', 'justifycenter', 'justifyjustify', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
-                'insertimage', 'emotion', 'insertvideo', 'music', 'insertcode', 'background',
-                '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'link', 'unlink', 'emotion', 'help']
-        ]
-    });
-   alert(ue.getContent());
-    </script>
-                    </div>
+        <script type="text/javascript">
+            var ue=UE.getEditor('content',{
+                toolbars: [
+                    ['fullscreen', 'source', 'undo', 'redo', 'bold', 'italic', 'underline', 'fontborder', 'backcolor', 'fontsize', 'fontfamily', 'justifyleft',
+                        'justifyright', 'justifycenter', 'justifyjustify', 'strikethrough', 'superscript', 'subscript', 'removeformat', 'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
+                        'insertimage', 'emotion', 'insertvideo', 'music', 'insertcode', 'background',
+                        '|', 'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', 'selectall', 'cleardoc', 'link', 'unlink', 'emotion', 'help']
+                ]
+            });
+           alert(ue.getContent());
+        </script>
 
 </body>
 </html>
