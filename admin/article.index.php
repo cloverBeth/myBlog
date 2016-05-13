@@ -403,10 +403,6 @@ require_once('../config/connect.php');
 
 
 
-
-
-
-
         <!--Myblog end-->
         <script>
             $(document).ready(function (){
